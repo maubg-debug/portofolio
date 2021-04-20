@@ -7,6 +7,7 @@ bg: "linear-gradient(150deg,#7714fd 0%,#ff25b2 100%)"
 ---
 
 https://github.com/maubg-debug/mauSearch/
+https://buscador.maucode.com/
 
 <p align="center">
   <a href="https://buscador.maucode.com"><img src="https://raw.githubusercontent.com/maubg-debug/mauSearch/main/static/icons/icon.png" width="256"></a>
