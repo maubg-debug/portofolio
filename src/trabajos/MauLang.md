@@ -1,5 +1,5 @@
 ---
-title: MauLang
+title: Lenguage de programacion
 excerpt: Un lenguage de programacion hecho por mi
 date: 2019-05-06T22:00:00.000+00:00
 author: Maubg
@@ -102,7 +102,7 @@ for i = 0 to 10 then
     if i <= 5 then
         continue
     end
-
+    
     break
 end
 ```
