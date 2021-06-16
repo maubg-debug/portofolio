@@ -1,48 +1,43 @@
 ---
 author: Maubg
-title: MauSearch
-excerpt: Este es un buscador que hize yo en el que se parece a el de google
+title: Slurp browser
+excerpt: La privacidad es un derecho, no un privilegio
 date: 2019-03-10 23:00:00 +0000
 bg: "linear-gradient(150deg,#7714fd 0%,#ff25b2 100%)"
 ---
 
-https://github.com/maubg-debug/mauSearch/
+https://github.com/slurp-browser/
 
-https://buscador.maucode.com/
+https://slurp.maucode.com/
+
+
 
 <p align="center">
-  <a href="https://buscador.maucode.com"><img src="https://raw.githubusercontent.com/maubg-debug/mauSearch/main/static/icons/icon.png" width="256"></a>
+  <a href="https://slurp.maucode.com"><img src="https://avatars.githubusercontent.com/u/83232058" width="200"></a>
+  <h1 align="center">Slurp Browser</h1>
+  
+  <p align="center">La privacidad es un derecho, no un privilegio.</p>
 </p>
 
-<div align="center">
-  <h1>MauSearch</h1>
-
----
-
-MauSearch es un buscador moderno hecho con tecnologia moderna como `react` con un UI moderno con extensiones y es totalmente customatizable.
-
-</div>
-
-# Tabla de contenidos:
+# Tabla de contenidos
 - [Caracteristicas](#Caracteristicas)
-- [Capturas de pantalla](#Capturas-de-pantalla)
 - [Descargar](#Descargas)
 - [Produccion](#Produccion)
   - [Ejecutar](#Ejecutar)
-- [Documentacion](#documentacion)
 - [Licencia](#Licencia)
-
 
 # Caracteristicas
 
-- **Chromium sin servicios de Google y bajo uso de recursos**: dado que mauSearch usa Electron bajo el capó, que se basa solo en varios y los componentes más importantes de Chromium, no está repleto de servicios de seguimiento de Google redundantes y otros.
+- **Chromium sin servicios de Google y bajo uso de recursos**: dado que Slurp se basa solo en varios y los componentes más importantes de Chromium, no está repleto de servicios de seguimiento de Google redundantes y otros.
 - **Interfaz de usuario rápida y fluida**: las animaciones son realmente fluidas y sus tiempos están perfectamente equilibrados.
 - **Página de nueva pestaña altamente personalizable** - ¡Personalice casi todos los aspectos de la página de nueva pestaña!
-- **IU del navegador personalizable**: elija si mauSearch debe tener una IU compacta o normal.
+- **IU del navegador personalizable**: elija si Slurp debe tener una IU compacta o normal, temas customatizables y compatibles con la chrome web store.
 - **Grupos de pestañas**: agrupa pestañas fácilmente, por lo que es difícil perderse.
-- **Pestañas desplazables**
-- **Soporte parcial para extensiones de Chrome**: instale algunas extensiones directamente desde Chrome Web Store \ *  (WIP)
-- **Escudo Mausearch** - Navegue por la web sin anuncios y no permita que los sitios web lo rastreen. Gracias al mauSearch Shield impulsado por [Cliqz](https://github.com/cliqz-oss/adblocker), los sitios web pueden cargar hasta 8 veces más rápido.
+- **Soporte para extensiones de Chrome**: instale algunas extensiones directamente desde Chrome Web Store y Edge web store
+- **Escudo Slurp** - Navegue por la web sin anuncios y no permita que los sitios web lo rastreen. Gracias al *Escudo Slurp* impulsado por [Cliqz](https://github.com/cliqz-oss/adblocker), los sitios web pueden cargar hasta 8 veces más rápido.
+- Modo pausa.
+- Modo lector (Solo en algunas paginas)
+- Creador de codigos QR
 
 ## Otras caracteristicas basicas
 
@@ -54,52 +49,44 @@ MauSearch es un buscador moderno hecho con tecnologia moderna como `react` con u
 - Tema oscuro y claro
 - Omnibox con algoritmo de autocompletar similar a Chromium
 - Sistema de pestañas de última generación
-
-# Capturas de pantalla
-
-> Se hara una captura en video...
-
+- Compatibilidad con todas las extensiones de chrome
+- Importar: Marcadores, Cookies, Historial, Contraseñas, Datos para autocompletar desde cualquier navegador web.
 
 # Descargas
-- [Descargalo en la web](https://buscador.maucode.com)
-- [Descargalo en los releases](https://github.com/maubg-debug/mauSearch/releases)
-
+- [Descargalo en la web](https://slurp.maucode.com)
+- [Descargalo en los releases](https://github.com/slurp-browser/browser-base/releases/latest)
 
 # Produccion
 
-## Ejecutar
+## Descargar / Ejecutar
+### Linux
 
-Antes de ejecutar mauSearch, asegúrese de tener **los últimos** [`Node.js`](https://nodejs.org/en/) y [` Yarn`](https://classic.yarnpkg.com/en/docs/install/#windows-stable) instalado en su máquina.
+```sh
+# Clonar el depot_tools de chromium para compilar Slurp
+$ git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 
-### Windows
+# Remplazamos la ruta en la session para poder utilizar comandos como 
+$ export PATH="$PATH:/path/to/depot_tools"
 
-Asegúrese de tener instaladas las herramientas de compilación. Puede instalarlos ejecutando este comando como **administrador**:
+# Clonamos Slurp :)
+$ git clone https://github.com/slurp-browser/browser-base
 
-```bash
-$ npm i -g herramientas de construcción de windows
+# Entramos en el directorio "src"
+$ cd browser-base/src
+
+# Instalamos dependencias requeridas para Slurp/Chromium
+$ ./build/install-build-deps.sh
+
+# Preparamos la carpeta de salida
+$ gn gen out/Default
+
+# Compilamos Slurp
+# NOTA: Esto puede tardar horas, lo recomendable es dejarlo durante la noche.
+$ autoninja -C out/Default chrome
+
+# Lo ejecutamos. Este seria el ejecutable en el que puedes meter argumentos, ...
+$ out/Default/chrome
 ```
-
-```bash
-$ yarn # Instalar las dependencias necesarias.
-$ yarn rebuild # Reconstruye módulos nativos usando encabezados Electron.
-$ yarn dev # Ejecutar mauSearch en modo de desarrollo
-```
-
-### Más comandos
-
-```bash
-$ yarn compile-win32 # Paquete mauSearch para Windows
-$ yarn compile-linux # Paquete mauSearch para Linux
-$ yarn compile-darwin # Paquete mauSearch para macOS
-$ yarn lint # Corre linter
-$ yarn lint-fix # Ejecuta linter y aplica correcciones automáticamente
-```
-
-Se pueden encontrar más comandos en [`package.json`](https://github.com/maubg-debug/mauSearch/blob/main/package.json).
-
-# Documentación
-
-Las guías y la referencia de la API se encuentran en el directorio [`docs`](https://github.com/maubg-debug/mauSearch/tree/main/docs).
 
 # Licencia
 
