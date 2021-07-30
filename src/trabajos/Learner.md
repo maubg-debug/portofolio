@@ -11,7 +11,8 @@ https://github.com/maubg-debug/lenguage/
 DOCUMENTACION: https://maubg-debug.github.io/lenguage/
 
 # learner
- Un lenguaje de programacion total mente nuevo hecho por mi
+
+Un lenguaje de programacion total mente nuevo hecho por mi
 
 extension : `.lr`
 
@@ -41,23 +42,23 @@ Para poder hacer variables seria asi como ejemplo
 ```js
 var ejemplo = "foo"; //- Puede terminar por ; o sin nada
 //- Tambien se puede con numeros
-var ejemplo2 = 2
-var ejemplo3 = 2.20
+var ejemplo2 = 2;
+var ejemplo3 = 2.2;
 
 //- Booleanos
-var ejemplo4 = true
-var ejemplo5 = false
+var ejemplo4 = true;
+var ejemplo5 = false;
 ```
 
 Como podras hacer input/output en este lenguage de programacion
 
 ```js
 //- Output
-printLn("...")
+printLn("...");
 
 //- Input
-var mi_input = input()
-var mi_input_en_int = int_input() //- Tambien se puede int(input())
+var mi_input = input();
+var mi_input_en_int = int_input(); //- Tambien se puede int(input())
 ```
 
 Este seria un ejemplo para in if statement en el que se puede implementar tambien `else if` y tambien `else` terminando con `end`. Dentro de las palabras claves deberias de introducir tu condicion
@@ -75,12 +76,12 @@ end
 Aqui te enseño unos build-in para que puedas ver como combertir variables de tipo y como ver el tipo.
 
 ```js
-var string = "32"
-var numero = int(string)
-var booleano = bool(string)
-var string = str(numero)
-var num = float(numero)
-var lista = list("1234")
+var string = "32";
+var numero = int(string);
+var booleano = bool(string);
+var string = str(numero);
+var num = float(numero);
+var lista = list("1234");
 ```
 
 Tambien puedes hacer for loops y while loops porque todo buien lenguage de programmacion deberia de tener
@@ -102,7 +103,7 @@ for i = 0 to 10 then
     if i <= 5 then
         continue
     end
-    
+
     break
 end
 ```
@@ -156,22 +157,22 @@ end
 Aprende a como se prodria manipular los arrays en este lenguage de programmacion
 
 ```js
-var arr = [10, 20 , 30, 50, 40]
+var arr = [10, 20, 30, 50, 40];
 
-printLn(arr)
+printLn(arr);
 
-join(arr, 10)
-pop(arr, 1)
-extend(arr, [1, 3, 4, 6])
+join(arr, 10);
+pop(arr, 1);
+extend(arr, [1, 3, 4, 6]);
 
-var arr_ = ["uno", "dos", "tres"]
-var arr2 = arr_ + ["cuatro", "cinco"]
+var arr_ = ["uno", "dos", "tres"];
+var arr2 = arr_ + ["cuatro", "cinco"];
 
-printLn(length(arr2)) //- len()
+printLn(length(arr2)); //- len()
 
-printLn(arr/int_input()) //- seria igual a array[num]
+printLn(arr / int_input()); //- seria igual a array[num]
 
-printLn([1,2,3,4]*[5,6,7,8])
+printLn([1, 2, 3, 4] * [5, 6, 7, 8]);
 
 //- ...
 ```
@@ -179,9 +180,8 @@ printLn([1,2,3,4]*[5,6,7,8])
 Para mas funcionalidad y diversion hemos añadido algunos build-in para hacerlos mas interesante
 
 ```js
-sleep(4)
-CLS()
-isinstance("hola", str)
+sleep(4);
+CLS();
+isinstance("hola", str);
 //- ...
 ```
-

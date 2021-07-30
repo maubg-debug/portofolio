@@ -3,14 +3,14 @@ new_page_extension: md
 auto_deploy: false
 webhook_url:
 sections:
-- type: directory
-  path: trabajos
-  label: trabajos
-  create: all
-  match: "**/*"
+  - type: directory
+    path: trabajos
+    label: trabajos
+    create: all
+    match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
-front_matter_path: ''
+front_matter_path: ""
 use_front_matter_path: false
 file_template: ":filename:"
 build:

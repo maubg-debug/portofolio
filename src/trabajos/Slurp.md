@@ -10,8 +10,6 @@ https://github.com/slurp-browser/
 
 https://slurp.maucode.com/
 
-
-
 <p align="center">
   <a href="https://slurp.maucode.com"><img src="https://avatars.githubusercontent.com/u/83232058" width="200"></a>
   <h1 align="center">Slurp Browser</h1>
@@ -20,6 +18,7 @@ https://slurp.maucode.com/
 </p>
 
 # Tabla de contenidos
+
 - [Caracteristicas](#Caracteristicas)
 - [Descargar](#Descargas)
 - [Produccion](#Produccion)
@@ -34,7 +33,7 @@ https://slurp.maucode.com/
 - **IU del navegador personalizable**: elija si Slurp debe tener una IU compacta o normal, temas customatizables y compatibles con la chrome web store.
 - **Grupos de pestañas**: agrupa pestañas fácilmente, por lo que es difícil perderse.
 - **Soporte para extensiones de Chrome**: instale algunas extensiones directamente desde Chrome Web Store y Edge web store
-- **Escudo Slurp** - Navegue por la web sin anuncios y no permita que los sitios web lo rastreen. Gracias al *Escudo Slurp* impulsado por [Cliqz](https://github.com/cliqz-oss/adblocker), los sitios web pueden cargar hasta 8 veces más rápido.
+- **Escudo Slurp** - Navegue por la web sin anuncios y no permita que los sitios web lo rastreen. Gracias al _Escudo Slurp_ impulsado por [Cliqz](https://github.com/cliqz-oss/adblocker), los sitios web pueden cargar hasta 8 veces más rápido.
 - Modo pausa.
 - Modo lector (Solo en algunas paginas)
 - Creador de codigos QR
@@ -53,19 +52,21 @@ https://slurp.maucode.com/
 - Importar: Marcadores, Cookies, Historial, Contraseñas, Datos para autocompletar desde cualquier navegador web.
 
 # Descargas
+
 - [Descargalo en la web](https://slurp.maucode.com)
 - [Descargalo en los releases](https://github.com/slurp-browser/browser-base/releases/latest)
 
 # Produccion
 
 ## Descargar / Ejecutar
+
 ### Linux
 
 ```sh
 # Clonar el depot_tools de chromium para compilar Slurp
 $ git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 
-# Remplazamos la ruta en la session para poder utilizar comandos como 
+# Remplazamos la ruta en la session para poder utilizar comandos como
 $ export PATH="$PATH:/path/to/depot_tools"
 
 # Clonamos Slurp :)
